@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ThinkingInReact from "./ThinkingInReact";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThinkingInReact />
   </React.StrictMode>,
   document.getElementById('root')
 );
