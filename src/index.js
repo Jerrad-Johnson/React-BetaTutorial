@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import CustomizingUI from "./CustomizingUI";
-import ThinkingInReact from "./ThinkingInReact";
+//import CustomizingUI from "./CustomizingUI";
+//import ThinkingInReact from "./ThinkingInReact";
+import AddingInteractivity from "./AddingInteractivity";
 
 ReactDOM.render(
   <React.StrictMode>
-      <CustomizingUI />
+      <AddingInteractivity />
   </React.StrictMode>,
   document.getElementById('root')
 );
