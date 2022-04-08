@@ -7,7 +7,7 @@ import ThinkingInReact from "./ThinkingInReact";
 
 ReactDOM.render(
   <React.StrictMode>
-      <ThinkingInReact />
+      <CustomizingUI />
   </React.StrictMode>,
   document.getElementById('root')
 );
