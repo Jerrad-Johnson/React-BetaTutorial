@@ -62,10 +62,9 @@ function CreateTableHead({familyMembers}){
 
 function CreateTableRows({familyMembers, searchValue}){
     const rows = [];
-    let removeCaseFromSearchValue = searchValue.toLowerCase();;
 
-    if (searchValue == ""){
-        familyMembers.forEach(member => {
+    familyMembers.forEach(member => {
+        if (member.name.toLowerCase().includes(searchValue.toLowerCase())){
             rows.push(
                 <tr key={member.name}>
                     <td>{member.name}</td>
@@ -73,20 +72,8 @@ function CreateTableRows({familyMembers, searchValue}){
                     <td>{member.degree}</td>
                 </tr>
             );
-        });
-    } else {
-        familyMembers.forEach(member => {
-            if (member.name.toLowerCase() == removeCaseFromSearchValue){
-                rows.push(
-                    <tr key={member.name}>
-                        <td>{member.name}</td>
-                        <td>{member.relation}</td>
-                        <td>{member.degree}</td>
-                    </tr>
-                );
-            }
-        });
-    }
+        }
+    });
 
    return(
        <tbody>
