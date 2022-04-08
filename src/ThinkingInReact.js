@@ -1,5 +1,5 @@
 import './App.css';
-import {memo, useState} from "react";
+import {useState} from "react";
 
 function QueryTable({familyMembers}){
     let inputKey = "familySearchbar"
@@ -29,7 +29,7 @@ function SearchBar({inputKey, searchValue, onSearchValueChange}){
           <form>
               <label>Search by Name</label><br />
               <input
-                  type={ "text"}
+                  type={"text"}
                   className={inputKey + " searchBar"}
                   value={searchValue}
                   onChange={(e) =>
@@ -63,13 +63,6 @@ function CreateTableHead({familyMembers}){
 function CreateTableRows({familyMembers, searchValue}){
     const rows = [];
     let removeCaseFromSearchValue = searchValue.toLowerCase();;
-    let removeCaseFromFamilyMemberList = [];
-
-    /*familyMembers.forEach(member => {
-
-    });*/
-
-
 
     if (searchValue == ""){
         familyMembers.forEach(member => {
@@ -95,7 +88,8 @@ function CreateTableRows({familyMembers, searchValue}){
         });
     }
 
-   return(<tbody>
+   return(
+       <tbody>
             {rows}
        </tbody>
    );
